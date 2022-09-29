@@ -11,6 +11,8 @@ export default function PostPage({
   content,
   slug,
 }) {
+  console.log({ title, category, date, cover_image, author, author_image });
+  console.log({ content, slug });
   return (
     <Layout title={title}>
       <Link href="/blog">Go Back</Link>
