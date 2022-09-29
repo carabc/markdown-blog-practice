@@ -38,7 +38,6 @@ export default function PostPage({
     </Layout>
   );
 }
-
 export async function getStaticPaths() {
   const files = fs.readdirSync(path.join("posts"));
 
