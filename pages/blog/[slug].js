@@ -44,7 +44,7 @@ export async function getStaticPaths() {
 
   const paths = files.map((filename) => ({
     params: {
-      slug: filename.replace("md", ""),
+      slug: filename.replace(".md", ""),
     },
   }));
 
@@ -62,6 +62,7 @@ export async function getStaticProps({ params: { slug } }) {
   );
 
   const { data: frontmatter, content } = matter(markdownWithMeta);
+  console.log(frontmatter);
 
   return {
     props: {
